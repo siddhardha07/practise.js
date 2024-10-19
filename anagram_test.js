@@ -17,7 +17,8 @@ let isAnagram = false;
 if (string1.length === string2.length) {
 
     isAnagram = true;
-    for (let index = 0; index < string1.length && isAnagram; index++) {
+    let index = 0;
+    while (index < string1.length && isAnagram) {
 
         let charInString1 = 0;
         for (let stringIndex = 0; stringIndex < string1.length; stringIndex++) {
@@ -36,6 +37,7 @@ if (string1.length === string2.length) {
         if (charInString1 !== charInString2) {
             isAnagram = false;
         }
+        index++;
     }
 }
 
